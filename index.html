@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Bridge | To be heard is to be loved.</title>
+    <meta name="description" content="Bridge facilitates the conversations that matter most. A space to share what needs to be said and finally feel understood."/>
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Bridge — To be heard is to be loved."/>
+    <meta property="og:description" content="Bridge facilitates the conversations that matter most. A space to share what needs to be said and finally feel understood."/>
+    <meta property="og:image" content="/couple.png"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://bringbridge.com"/>
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Bridge — To be heard is to be loved."/>
+    <meta name="twitter:description" content="Bridge facilitates the conversations that matter most. A space to share what needs to be said and finally feel understood."/>
+    <meta name="twitter:image" content="/couple.png"/>
+
+    <!-- Favicon (inline SVG) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌉</text></svg>"/>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Plus+Jakarta+Sans:wght@200..800&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-container": "#64625f",
+              "error": "#ba1a1a",
+              "on-secondary-fixed": "#1c1c19",
+              "tertiary": "#2c6656",
+              "on-tertiary": "#ffffff",
+              "on-primary": "#ffffff",
+              "surface-container-high": "#f5f3f0",
+              "on-primary-fixed-variant": "#6c3831",
+              "on-tertiary-fixed": "#002018",
+              "inverse-primary": "#feb4aa",
+              "secondary-fixed": "#e5e2de",
+              "surface-dim": "#dbdad7",
+              "secondary": "#7c7a77",
+              "on-primary-container": "#fffbff",
+              "inverse-surface": "#30312f",
+              "surface-tint": "#884f47",
+              "outline-variant": "#e5e2de",
+              "surface": "#fcfbf9",
+              "tertiary-container": "#467f6e",
+              "surface-container-low": "#ffffff",
+              "secondary-fixed-dim": "#c9c6c2",
+              "on-error-container": "#93000a",
+              "on-background": "#1b1c1a",
+              "secondary-container": "#f5f3f0",
+              "on-secondary-fixed-variant": "#474744",
+              "background": "#fcfbf9",
+              "tertiary-fixed": "#b3efda",
+              "inverse-on-surface": "#f2f0ed",
+              "primary-fixed-dim": "#feb4aa",
+              "primary-fixed": "#ffdad5",
+              "on-error": "#ffffff",
+              "surface-bright": "#fcfbf9",
+              "primary-container": "#a2645c",
+              "on-secondary": "#ffffff",
+              "on-tertiary-fixed-variant": "#125041",
+              "surface-variant": "#f0ede9",
+              "on-tertiary-container": "#f5fff9",
+              "on-surface-variant": "#524341",
+              "error-container": "#ffdad6",
+              "surface-container-lowest": "#ffffff",
+              "outline": "#857371",
+              "surface-container": "#f7f5f2",
+              "surface-container-highest": "#f0ede9",
+              "primary": "#854c45",
+              "on-primary-fixed": "#360e0a",
+              "tertiary-fixed-dim": "#98d2bf",
+              "on-surface": "#1b1c1a"
+            },
+            fontFamily: {
+              "headline": ["Newsreader", "serif"],
+              "body": ["Plus Jakarta Sans", "sans-serif"],
+              "label": ["Plus Jakarta Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #fcfbf9;
+        }
+        .serif-italic {
+            font-family: 'Newsreader', serif;
+            font-style: italic;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+
+        /* Success state for form */
+        .form-success {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col items-center justify-center p-6 md:p-12 selection:bg-primary/20">
+
+    <main class="w-full max-w-6xl flex-1 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+
+        <!-- Left column: Copy + Form -->
+        <div class="lg:col-span-6 flex flex-col items-start space-y-12 order-2 lg:order-1">
+            <div class="space-y-6">
+                <div class="flex items-center space-x-3 text-secondary/60 tracking-[0.2em] uppercase text-[10px] font-bold">
+                    <span class="w-8 h-[1px] bg-outline-variant"></span>
+                    <span>Bridge</span>
+                </div>
+
+                <h1 class="font-headline text-5xl md:text-7xl lg:text-8xl leading-[1.05] tracking-tight text-on-surface">
+                    To be <span class="serif-italic">heard</span> is to be <span class="serif-italic">loved</span>.
+                </h1>
+
+                <p class="font-body text-lg md:text-xl text-secondary max-w-md leading-relaxed">
+                    Bridge facilitates the conversations that matter most. A space to share what needs to be said and finally feel understood.
+                </p>
+            </div>
+
+            <!-- Waitlist Form — Netlify Forms -->
+            <div class="w-full max-w-md">
+                <form name="waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="flex flex-col space-y-4">
+                    <!-- Honeypot field for spam protection (hidden) -->
+                    <input type="hidden" name="form-name" value="waitlist"/>
+                    <p class="hidden"><label>Don't fill this out: <input name="bot-field"/></label></p>
+
+                    <div class="relative group">
+                        <input
+                            name="email"
+                            class="w-full bg-surface-container-low border border-outline-variant/50 rounded-none py-6 px-8 text-on-surface placeholder:text-secondary/40 focus:ring-0 focus:bg-white focus:border-primary/30 transition-all duration-500 font-body text-lg shadow-sm group-hover:shadow-md"
+                            placeholder="Your email address"
+                            type="email"
+                            required
+                        />
+                        <div class="absolute bottom-0 left-0 w-0 h-[1px] bg-primary group-focus-within:w-full transition-all duration-700"></div>
+                    </div>
+
+                    <button type="submit" class="bg-primary text-on-primary py-5 px-10 self-start font-body font-medium tracking-wide hover:opacity-95 hover:shadow-lg transition-all duration-300 flex items-center group">
+                        Join the Waitlist
+                        <span class="material-symbols-outlined ml-2 text-sm group-hover:translate-x-1 transition-transform duration-300">arrow_forward</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Right column: Hero image -->
+        <div class="lg:col-span-6 flex items-center justify-center order-1 lg:order-2">
+            <div class="relative w-full aspect-[4/5] lg:aspect-[4/5] overflow-hidden rounded-sm shadow-xl shadow-primary/5">
+                <img
+                    alt="A couple sharing a warm, connected moment together in soft natural light."
+                    class="w-full h-full object-cover"
+                    src="./couple.png"
+                />
+                <div class="absolute inset-0 bg-primary/5 mix-blend-overlay pointer-events-none"></div>
+
+                <!-- Quote overlay -->
+                <div class="absolute bottom-10 left-10 right-10 z-20 hidden md:block">
+                    <div class="bg-white/90 backdrop-blur-md p-8 border-l-2 border-primary">
+                        <p class="font-headline italic text-primary text-2xl leading-snug">
+                            "Everything changed when we finally learned how to hear each other."
+                        </p>
+                        <p class="font-label text-[10px] uppercase tracking-widest text-secondary mt-6">A Shared Realization</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Custom success page handled by Netlify's redirect, or inline JS fallback -->
+    <script>
+        // Handle form submission with inline success message
+        if (window.location.search.includes('success=true')) {
+            const form = document.querySelector('form[name="waitlist"]');
+            if (form) {
+                form.innerHTML = `
+                    <div class="form-success space-y-3">
+                        <p class="font-headline italic text-primary text-2xl">Thank you.</p>
+                        <p class="font-body text-secondary text-lg">We'll be in touch when Bridge is ready for you.</p>
+                    </div>
+                `;
+            }
+        }
+    </script>
+
+</body>
+</html>

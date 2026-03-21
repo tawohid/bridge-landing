@@ -1,0 +1,17 @@
+# Netlify configuration
+# https://docs.netlify.com/configure-builds/file-based-configuration/
+
+[build]
+  publish = "."
+
+# Redirect after successful form submission
+[[redirects]]
+  from = "/success"
+  to = "/?success=true"
+  status = 200
+
+# SPA-style fallback (not needed for single page, but good practice)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
