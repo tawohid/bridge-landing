@@ -10,6 +10,13 @@
   to = "/?success=true"
   status = 200
 
+# Download the latest macOS build
+[[redirects]]
+  from = "/download"
+  to = "/downloads/Bridge-0.3.8-arm64.dmg"
+  status = 302
+  force = true
+
 # SPA-style fallback (not needed for single page, but good practice)
 [[redirects]]
   from = "/*"
