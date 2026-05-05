@@ -264,6 +264,16 @@ footer.foot {
 }
 .cta-arrow { margin-left: 6px; transition: transform 0.2s; display: inline-block; }
 .cta:hover .cta-arrow { transform: translateX(3px); }
+.cta-arrow-back { margin-right: 6px; transition: transform 0.2s; display: inline-block; }
+.cta:hover .cta-arrow-back { transform: translateX(-3px); }
+.foot-note {
+  margin-top: 22px;
+  font-family: var(--sans);
+  font-size: 11px;
+  color: var(--sub);
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
 
 @media (max-width: 600px) {
   .msg-human { max-width: 92%; }
@@ -988,7 +998,8 @@ The tension I see: Aman needs space to be a mess without it meaning something pe
   </section>
 
   <footer class="foot">
-    <a class="cta" href="https://app.bringbridge.com">Try a session<span class="cta-arrow">→</span></a>
+    <a class="cta" href="/"><span class="cta-arrow-back">←</span> Back to waitlist</a>
+    <div class="foot-note">Names and identifying details changed with permission.</div>
   </footer>
 </article>
 
