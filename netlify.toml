@@ -13,7 +13,7 @@
 # Download the latest macOS build
 [[redirects]]
   from = "/download"
-  to = "/downloads/Bridge-0.3.8-arm64.dmg"
+  to = "/downloads/Bridge-0.3.9-arm64.dmg"
   status = 302
   force = true
 
