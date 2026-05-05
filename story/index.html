@@ -129,7 +129,6 @@ article {
 .preamble-block.side-b {
   border-right: 2px solid var(--b);
   padding: 4px 18px 4px 0;
-  text-align: right;
 }
 .preamble-label {
   font-family: var(--sans);
@@ -140,7 +139,7 @@ article {
   margin-bottom: 10px;
 }
 .preamble-block.side-a .preamble-label { color: var(--a); }
-.preamble-block.side-b .preamble-label { color: var(--b); }
+.preamble-block.side-b .preamble-label { color: var(--b); text-align: right; }
 .preamble-text {
   font-family: var(--serif);
   font-style: italic;
@@ -198,7 +197,6 @@ article {
 .msg-ai.side-b .msg-text {
   border-right: 2px solid var(--b);
   padding: 4px 18px 4px 0;
-  text-align: right;
 }
 .msg-text strong { font-weight: 600; font-style: normal; color: var(--sub2); }
 
@@ -221,8 +219,6 @@ article {
   line-height: 1.55;
 }
 .msg-list li:last-child { margin-bottom: 0; }
-/* Right-aligned messages: lists stay left-aligned for readability */
-.msg-ai.side-b .msg-list { text-align: left; }
 
 .msg-system {
   max-width: 480px; margin: 14px auto;
