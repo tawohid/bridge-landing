@@ -36,17 +36,55 @@ body {
 }
 .nav {
   position: sticky; top: 0; z-index: 10;
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 16px 24px;
   background: rgba(234,230,223,0.92);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--border);
-  font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
 }
-.nav a { color: var(--a); text-decoration: none; font-weight: 600; }
-.nav a:hover { color: var(--text); }
-.nav .meta { color: var(--sub); font-weight: 500; }
+.nav-row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 24px;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.nav-row a {
+  color: var(--a);
+  text-decoration: none;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.nav-row a:hover { color: var(--text); }
+.nav-topic {
+  text-align: center;
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--sub2);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+.nav-spacer { width: 60px; }
+.progress {
+  height: 2px;
+  width: 0%;
+  background: var(--a);
+  transition: width 0.08s linear;
+}
+@media (max-width: 600px) {
+  .nav-row { padding: 12px 16px; }
+  .nav-topic { font-size: 12px; }
+  .nav-spacer { display: none; }
+  .nav-row { grid-template-columns: auto 1fr; }
+}
 
 article {
   max-width: 640px;
@@ -81,15 +119,25 @@ article {
 .byline .dot { margin: 0 10px; opacity: 0.5; }
 
 .preamble {
+  display: flex; flex-direction: column; gap: 28px;
+  margin-bottom: 64px;
+}
+.preamble-block {
   font-family: var(--serif);
   font-style: italic;
   font-size: 18px;
-  line-height: 1.6;
+  line-height: 1.65;
   color: var(--sub2);
-  margin-bottom: 64px;
 }
-.preamble p { margin-bottom: 18px; }
-.preamble p:last-child { margin-bottom: 0; }
+.preamble-block.side-a {
+  border-left: 2px solid var(--a);
+  padding: 4px 0 4px 18px;
+}
+.preamble-block.side-b {
+  border-right: 2px solid var(--b);
+  padding: 4px 18px 4px 0;
+  text-align: right;
+}
 
 .preamble-rule {
   text-align: center;
@@ -214,20 +262,22 @@ footer.foot .product {
 </head>
 <body>
 <nav class="nav">
-  <a href="/">← Bridge</a>
-  <span class="meta">May 4, 2026 · Anonymized</span>
+  <div class="nav-row">
+    <a href="/">← Bridge</a>
+    <div class="nav-topic">whether or not a connection hurts or helps right now</div>
+    <div class="nav-spacer"></div>
+  </div>
+  <div class="progress" id="progress"></div>
 </nav>
 
 <article>
   <div class="eyebrow">A Bridge session</div>
   <h1 class="title">whether or not a connection hurts or helps right now</h1>
-  <div class="byline">
-    Aman &amp; Mira <span class="dot">·</span> May 4, 2026 <span class="dot">·</span> 12.8k words
-  </div>
+  <div class="byline">Aman &amp; Mira</div>
 
   <section class="preamble">
-<p>Aman is someone who&#39;s been in a lot of motion lately: new job, visa stress finally resolved, a relationship he&#39;s been honest enough with himself to end even when it would&#39;ve been easier to delay. He thinks carefully about people — probably more carefully than he lets on in the moment — and he&#39;s been sitting with this question of connection in a real way, not just abstractly. The tension he brings into this conversation is one he knows well: he&#39;s someone who builds genuine closeness, but also someone whose life has been moving fast enough that it&#39;s fair to ask whether he has the bandwidth to actually let something in right now — or whether connection, at this particular moment, is something he reaches for and then can&#39;t quite hold.</p>
-<p>Mira is someone who knows how to hold other people&#39;s complexity with a lot of care — she&#39;s done it professionally, academically, and personally — but she&#39;s still learning to apply that same generosity to her own needs in real time. She tends to reach for harmony before she reaches for honesty, which means the people close to her often get a softer version of what she&#39;s actually carrying. What she brings to this question isn&#39;t uncertainty about the connection — she feels pretty clear that it&#39;s real — but a quieter tension: whether she can stay present to what she actually needs inside of it, or whether the comfort of the connection becomes a reason not to look too closely.</p>
+<div class="preamble-block side-a">Aman is someone who&#39;s been in a lot of motion lately: new job, visa stress finally resolved, a relationship he&#39;s been honest enough with himself to end even when it would&#39;ve been easier to delay. He thinks carefully about people — probably more carefully than he lets on in the moment — and he&#39;s been sitting with this question of connection in a real way, not just abstractly. The tension he brings into this conversation is one he knows well: he&#39;s someone who builds genuine closeness, but also someone whose life has been moving fast enough that it&#39;s fair to ask whether he has the bandwidth to actually let something in right now — or whether connection, at this particular moment, is something he reaches for and then can&#39;t quite hold.</div>
+<div class="preamble-block side-b">Mira is someone who knows how to hold other people&#39;s complexity with a lot of care — she&#39;s done it professionally, academically, and personally — but she&#39;s still learning to apply that same generosity to her own needs in real time. She tends to reach for harmony before she reaches for honesty, which means the people close to her often get a softer version of what she&#39;s actually carrying. What she brings to this question isn&#39;t uncertainty about the connection — she feels pretty clear that it&#39;s real — but a quieter tension: whether she can stay present to what she actually needs inside of it, or whether the comfort of the connection becomes a reason not to look too closely.</div>
   </section>
 
   <div class="preamble-rule">· · ·</div>
@@ -244,7 +294,7 @@ footer.foot .product {
   </div>
 <div class="msg-ai side-a">
       <div class="msg-name">Clauman</div>
-      <div class="msg-text"><strong>@Aman</strong> — then go for it. What's actually true for you right now about this connection? Not the version you'd say to make it easier on anyone — the real one. [YIELD]</div>
+      <div class="msg-text"><strong>@Aman</strong> — then go for it. What's actually true for you right now about this connection? Not the version you'd say to make it easier on anyone — the real one.</div>
     </div>
 <div class="msg-human side-a">
     <div class="msg-name">Aman</div>
@@ -264,7 +314,7 @@ footer.foot .product {
   </div>
 <div class="msg-ai side-a">
       <div class="msg-name">Clauman</div>
-      <div class="msg-text"><strong>@Aman</strong> — she just said she wants to help you figure it out. That's not a small thing. She's not defending herself or lobbying for a particular answer — she's orienting toward you. Worth noticing what that lands like. [YIELD]</div>
+      <div class="msg-text"><strong>@Aman</strong> — she just said she wants to help you figure it out. That's not a small thing. She's not defending herself or lobbying for a particular answer — she's orienting toward you. Worth noticing what that lands like.</div>
     </div>
 <div class="msg-human side-a">
     <div class="msg-name">Aman</div>
@@ -897,5 +947,22 @@ The tension I see: Aman needs space to be a mess without it meaning something pe
     <a href="/">bringbridge.com</a>
   </footer>
 </article>
+
+<script>
+  (function() {
+    var bar = document.getElementById('progress');
+    if (!bar) return;
+    function update() {
+      var doc = document.documentElement;
+      var scrolled = (window.scrollY || doc.scrollTop);
+      var height = (doc.scrollHeight - doc.clientHeight);
+      var pct = height > 0 ? Math.min(100, Math.max(0, (scrolled / height) * 100)) : 0;
+      bar.style.width = pct + '%';
+    }
+    update();
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+  })();
+</script>
 </body>
 </html>
