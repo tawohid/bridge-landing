@@ -122,13 +122,6 @@ article {
   display: flex; flex-direction: column; gap: 28px;
   margin-bottom: 64px;
 }
-.preamble-block {
-  font-family: var(--serif);
-  font-style: italic;
-  font-size: 18px;
-  line-height: 1.65;
-  color: var(--sub2);
-}
 .preamble-block.side-a {
   border-left: 2px solid var(--a);
   padding: 4px 0 4px 18px;
@@ -137,6 +130,23 @@ article {
   border-right: 2px solid var(--b);
   padding: 4px 18px 4px 0;
   text-align: right;
+}
+.preamble-label {
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.preamble-block.side-a .preamble-label { color: var(--a); }
+.preamble-block.side-b .preamble-label { color: var(--b); }
+.preamble-text {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--sub2);
 }
 
 .preamble-rule {
@@ -280,8 +290,14 @@ footer.foot {
   </div>
 
   <section class="preamble">
-<div class="preamble-block side-a">Aman is someone who&#39;s been in a lot of motion lately: new job, visa stress finally resolved, a relationship he&#39;s been honest enough with himself to end even when it would&#39;ve been easier to delay. He thinks carefully about people — probably more carefully than he lets on in the moment — and he&#39;s been sitting with this question of connection in a real way, not just abstractly. The tension he brings into this conversation is one he knows well: he&#39;s someone who builds genuine closeness, but also someone whose life has been moving fast enough that it&#39;s fair to ask whether he has the bandwidth to actually let something in right now — or whether connection, at this particular moment, is something he reaches for and then can&#39;t quite hold.</div>
-<div class="preamble-block side-b">Mira is someone who knows how to hold other people&#39;s complexity with a lot of care — she&#39;s done it professionally, academically, and personally — but she&#39;s still learning to apply that same generosity to her own needs in real time. She tends to reach for harmony before she reaches for honesty, which means the people close to her often get a softer version of what she&#39;s actually carrying. What she brings to this question isn&#39;t uncertainty about the connection — she feels pretty clear that it&#39;s real — but a quieter tension: whether she can stay present to what she actually needs inside of it, or whether the comfort of the connection becomes a reason not to look too closely.</div>
+<div class="preamble-block side-a">
+    <div class="preamble-label">CLAUMAN · from Aman&#39;s history with Claude</div>
+    <div class="preamble-text">Aman is someone who&#39;s been in a lot of motion lately: new job, visa stress finally resolved, a relationship he&#39;s been honest enough with himself to end even when it would&#39;ve been easier to delay. He thinks carefully about people — probably more carefully than he lets on in the moment — and he&#39;s been sitting with this question of connection in a real way, not just abstractly. The tension he brings into this conversation is one he knows well: he&#39;s someone who builds genuine closeness, but also someone whose life has been moving fast enough that it&#39;s fair to ask whether he has the bandwidth to actually let something in right now — or whether connection, at this particular moment, is something he reaches for and then can&#39;t quite hold.</div>
+  </div>
+<div class="preamble-block side-b">
+    <div class="preamble-label">CLAUMIRA · from Mira&#39;s history with Claude</div>
+    <div class="preamble-text">Mira is someone who knows how to hold other people&#39;s complexity with a lot of care — she&#39;s done it professionally, academically, and personally — but she&#39;s still learning to apply that same generosity to her own needs in real time. She tends to reach for harmony before she reaches for honesty, which means the people close to her often get a softer version of what she&#39;s actually carrying. What she brings to this question isn&#39;t uncertainty about the connection — she feels pretty clear that it&#39;s real — but a quieter tension: whether she can stay present to what she actually needs inside of it, or whether the comfort of the connection becomes a reason not to look too closely.</div>
+  </div>
   </section>
 
   <div class="preamble-rule">· · ·</div>
